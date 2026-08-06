@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiGame</title>
+
+    <!-- Wikipedia Official Stylesheet -->
+    <link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?lang=en&modules=site.styles&only=styles&skin=vector-2022">
+
+    <!-- Custom game styling -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Custom Header for the WikiGame */
+        .game-navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #a2a9b1;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .game-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #202122;
+        }
+
+        .game-logo img {
+            width: 35px;
+            height: auto;
+        }
+
+        /* Container centering Wikipedia content */
+        #content-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: #ffffff;
+            border: 1px solid #a2a9b1;
+            padding: 30px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="skin-vector-2022">
+
+    <!-- Top Navigation Bar -->
+    <header class="game-navbar">
+        <div class="game-logo">
+            <!-- Official Wikipedia Globe Icon -->
+            <img src="https://en.wikipedia.org/static/images/icons/wikipedia.png" alt="Wikipedia Logo">
+            <span>WikiGame</span>
+        </div>
+    </header>
+
+    <!-- Wikipedia Main Content Wrapper -->
+    <main id="content-container">
+        <h1 id="firstHeading" class="firstHeading mw-first-heading">{{ title }}</h1>
+        <hr>
+        
+        <!-- mw-parser-output applies standard Wikipedia layout styles -->
+        <div class="mw-body-content mw-parser-output">
+            <div>
+            <strong>Start: </strong> <span style="color: rgb(204, 51, 51);">{{start}}</span>
+            <a href = "/play?title={{start}}">Click to start</a>
+            </div>
+            <div>
+            <strong>Target: </strong> <span style="color: rgb(204, 51, 51);">{{target}}</span>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
