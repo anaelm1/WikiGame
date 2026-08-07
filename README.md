@@ -1,7 +1,5 @@
 # WikiGame
 
-**Video Demo:** 
-
 **Live Demo:** https://wiki-game-phi.vercel.app/ 
 
 Play a few rounds, and let me know if you enjoyed!!
