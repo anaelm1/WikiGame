@@ -10,6 +10,7 @@ import shutil
 
 from helper import get_wikipedia_page, clean_page, random_page, normalize
 
+
 # Vercel doesn't support my database so I have to put it in tmp folder if I run on vercel
 if os.environ.get("VERCEL"):
     db_path = "/tmp/records.db"
