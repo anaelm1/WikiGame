@@ -62,7 +62,7 @@ def play():
         #saving game to database
         path = json.dumps(session["user_route"])
         db.execute("INSERT INTO history (name, start_page, end_page, player_clicks, player_path) VALUES (?, ?, ?, ?, ?)", session["name"], start, target, session["clicks"], path)
-        return render_template("won.html", name=session["name"], start=start, target=target, clicks=session["clicks"], paths=session["user_route"])
+        return render_template("won.html", name=session["name"], start=start, target=normalized_target, clicks=session["clicks"], paths=session["user_route"])
 
     result = get_wikipedia_page(title)
     if not result or not result[1]:
