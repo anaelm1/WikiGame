@@ -6,11 +6,19 @@ from flask_session import Session
 from bs4 import BeautifulSoup
 import requests 
 import json
+import shutil
 
 from helper import get_wikipedia_page, clean_page, random_page, normalize
 
-
-db = SQL("sqlite:///records.db")
+# Vercel doesn't support my database so I have to put it in tmp folder if I run on vercel
+if os.environ.get("VERCEL"):
+    db_path = "/tmp/records.db"
+    if not os.path.exists(db_path) and os.path.exists("records.db"):
+        shutil.copyfile("records.db", db_path)
+    db = SQL(f"sqlite:///{db_path}")
+else:
+    # For development on Windows
+    db = SQL("sqlite:///records.db")
 
 app = Flask(__name__)
 app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'local-development-fallback-key')

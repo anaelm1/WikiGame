@@ -3,3 +3,4 @@ Flask-Session
 cs50
 beautifulsoup4
 requests
+shutil
