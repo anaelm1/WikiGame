@@ -51,7 +51,7 @@ WikiGame is an online game in which you are given a random Wikipedia start page 
 * **[vercel.json](./vercel.json):** The configuration file for Vercel hosting.
 
 ### Frontend ([templates/](./templates/))
-* **[history.html](./templates/history.html):** A developer-only page that displays all database records using Jinja loops. This page is not advertised on the main website.
+* **[history.html](./templates/history.html):** A developer-only page that displays all database records using Jinja loops. This page is not advertised on the main website. To see it u need to go to "/history"
 * **[index.html](./templates/index.html):** The main landing page of the website.
 * **[login.html](./templates/login.html):** The user login page.
 * **[page.html](./templates/page.html):** Renders the requested Wikipedia article. It uses a GET request to receive the title and calls functions in `helpers.py` to display the content.
