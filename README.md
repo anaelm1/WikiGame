@@ -1,13 +1,13 @@
 # WikiGame
 
-**Video Demo:** [Insert Link Here]  
+**Video Demo:** 
 **Live Demo:** https://wiki-game-phi.vercel.app/ 
 
 Play a few rounds, and let me know if you enjoyed!!
 
 **Project Link:** https://github.com/anaelm1/WikiGame
 
-![Gameplay Screenshot](./Readme pic.PNG)
+![Gameplay Screenshot](./Readme%20pic.PNG)
 
 ## Table of Contents
 1. [Description](#description)
@@ -39,7 +39,7 @@ WikiGame is an online game in which you are given a random Wikipedia start page 
 
 ### Backend & Configuration
 * **[app.py](./app.py):** The main Python file that hosts the Flask server and contains the routing functions for each page (login, index, etc.). It also manages Flask sessions using a cache system.
-* **[helpers.py](./helpers.py):** A secondary Python file used to store non-Flask utility functions. This includes:
+* **[helper.py](./helper.py):** A secondary Python file used to store non-Flask utility functions. This includes:
   * Fetching Wikipedia titles and pages.
   * Cleaning the pages using Beautiful Soup. This process converts all Wikipedia `href` links into local `/` routes so the user remains inside the game environment.
   * Generating random, popular Wikipedia page titles using Python's `random` module.
@@ -126,7 +126,7 @@ I also planned to include player comparison charts to show how a user's run comp
 ---
 
 ## Future Plans
-Although I have closed this project for now, I would love to return to it in the future to implement various quality-of-life features. If I delve into machine learning, creating the AI optimal pathfinder will definitely be my first personal project.
+Although I have closed this project for now, I would love to return to it in the future to implement various quality-of-life features. If I learn machine learning, creating the AI optimal pathfinder will definitely be my first personal project.
 
 ---
 
