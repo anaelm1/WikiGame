@@ -62,7 +62,7 @@
         <div class="game-logo">
             <!-- Official Wikipedia Globe Icon -->
             <img src="https://en.wikipedia.org/static/images/icons/wikipedia.png" alt="Wikipedia Logo">
-            <span>WikiGame</span>
+            <span>VICTORYYY - WikiGame</span>
         </div>
     </header>
 
@@ -74,13 +74,33 @@
         <!-- mw-parser-output applies standard Wikipedia layout styles -->
         <div class="mw-body-content mw-parser-output">
             <div>
-            <strong>Start: </strong> <span style="color: rgb(204, 51, 51);">{{start}}</span>
-            <a href = "/play?title={{start}}">Click to start</a>
+            <strong>You have won! </strong>
             </div>
             <div>
-            <strong>Target: </strong> <span style="color: rgb(204, 51, 51);">{{target}}</span>
+                <strong>Name: </strong> <span style="color: rgb(0, 0, 0);">{{name}}.</span>
             </div>
-        </div>
+            <div>
+                <strong>Your start page: </strong> <span style="color: rgb(255, 4, 4);">{{start}}.</span>
+            </div>
+            <div>
+                <strong>Your target page: </strong> <span style="color: rgb(0, 26, 255);">{{target}}.</span>
+            </div>
+            <div>
+                <strong>It took you </strong> <span style="color: rgb(0, 183, 255);">{{clicks}}</span> <strong>clicks to win! </strong>
+            </div>
+            <div>
+                <strong>This was your path: </strong>
+                {% for path in paths%}
+                    {% if path == target %}
+                        <span style="color: rgb(0, 26, 255);">{{path}}</span>
+                    {% else %}
+                        <span style="color: rgb(0, 26, 255);">{{path}}</span> <strong> -> </strong>
+                    {% endif %}
+                {% endfor%}
+            </div>
+            <div>
+            <strong>Play again?</strong>
+            <a href = "/">Click to start</a>
     </main>
 
 </body>

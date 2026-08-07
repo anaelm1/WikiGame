@@ -1,0 +1,4 @@
+--CREATE TABLE history(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, start_page TEXT NOT NULL, end_page TEXT NOT NULL, player_clicks INTEGER NOT NULL, player_path TEXT NOT NULL, created_at DEFAULT CURRENT_TIMESTAMP);
+
+SELECT * FROM history
+

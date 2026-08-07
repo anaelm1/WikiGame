@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In/Register - WikiGame</title>
+
+    <!-- Wikipedia Official Stylesheet -->
+    <link rel="stylesheet" href="https://en.wikipedia.org/w/load.php?lang=en&modules=site.styles&only=styles&skin=vector-2022">
+
+    <!-- Custom game styling -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #202122;
+        }
+
+        /* Custom Header for the WikiGame */
+        .game-navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #a2a9b1;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .game-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: #202122;
+            text-decoration: none;
+        }
+
+        .game-logo img {
+            width: 32px;
+            height: auto;
+        }
+
+        /* Container centering Wikipedia content */
+        #content-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            border: 1px solid #a2a9b1;
+            border-radius: 2px;
+            padding: 32px 40px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .mw-first-heading {
+            border-bottom: 1px solid #a2a9b1;
+            margin-bottom: 24px;
+            padding-bottom: 8px;
+            font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+            font-weight: normal;
+            font-size: 1.8rem;
+        }
+
+        /* Styled Form Layout */
+        .auth-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 360px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-group label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #54595d;
+        }
+
+        .input-field {
+            padding: 10px 12px;
+            border: 1px solid #a2a9b1;
+            border-radius: 2px;
+            font-size: 0.95rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+
+        .input-field:focus {
+            border-color: #36c;
+            box-shadow: inset 0 0 0 1px #36c;
+        }
+
+        .btn-submit {
+            background-color: #36c;
+            color: #ffffff;
+            border: 1px solid #36c;
+            border-radius: 2px;
+            padding: 10px 16px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+            margin-top: 8px;
+        }
+
+        .btn-submit:hover {
+            background-color: #447ff5;
+            border-color: #447ff5;
+        }
+
+        .btn-submit:active {
+            background-color: #2a4b8d;
+            border-color: #2a4b8d;
+        }
+
+        .auth-footer {
+            margin-top: 20px;
+            font-size: 0.875rem;
+            color: #54595d;
+        }
+
+        .auth-footer a {
+            color: #36c;
+            text-decoration: none;
+        }
+
+        .auth-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="skin-vector-2022">
+    
+    <!-- Top Navigation Bar -->
+    <header class="game-navbar">
+        <a href="/" class="game-logo">
+            <!-- Official Wikipedia Globe Icon -->
+            <img src="https://en.wikipedia.org/static/images/icons/wikipedia.png" alt="Wikipedia Logo">
+            <span>WikiGame</span>
+        </a>
+    </header>
+
+    <main id="content-container">
+        <h1 id="firstHeading" class="firstHeading mw-first-heading">Log In/Create Account</h1>
+        
+        <form action="/login" method="POST" class="auth-form">
+            <div class="form-group">
+                <label for="rname">Name</label>
+                <input id="name" class="input-field" placeholder="Enter your name" autocomplete="off" type="text" name="name" required>
+            </div>
+            <input type="submit" value="Log In/Register" class="btn-submit">
+        </form>
+    </main>
+
+</body>
+</html>
